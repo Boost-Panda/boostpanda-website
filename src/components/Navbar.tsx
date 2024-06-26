@@ -1,0 +1,145 @@
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+import { buttonVariants } from "./ui/button";
+import { Menu } from "lucide-react";
+import { ModeToggle } from "./mode-toggle";
+import { useEffect, useState } from "react";
+import { useTheme } from "./theme-provider";
+
+// import { LogoIcon } from "./Icons";
+import BotterflyLogoLight from "@/assets/light-mode-logo.svg";
+import BotterflyLogoDark from "@/assets/dark-mode-logo.svg";
+interface RouteProps {
+  href: string;
+  label: string;
+}
+
+const routeList: RouteProps[] = [
+  {
+    href: "#features",
+    label: "Features",
+  },
+  {
+    href: "#earlyAccess",
+    label: "Contact",
+  },
+  {
+    href: "#faq",
+    label: "FAQ",
+  },
+];
+
+export const Navbar = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [theme, setTheme] = useState<string>("");
+  const { setTheme: setThemeContext } = useTheme();
+  useEffect(() => {
+    const localTheme = localStorage.getItem("vite-ui-theme");
+    setTheme(localTheme || "");
+  }, [setThemeContext]);
+
+  return (
+    <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+      <NavigationMenu className="mx-auto">
+        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
+          <NavigationMenuItem className="font-bold flex">
+            <a
+              rel="noreferrer noopener"
+              href="/"
+              className="ml-2 font-bold text-xl flex"
+            >
+              {theme === "dark" ? (
+                 <img
+                src={BotterflyLogoDark}
+                alt="Botterfly Logo"
+                className="h-8 w-8 mr-2"
+              />
+              ) : theme === "system" ? (
+                <img
+                  src={window.matchMedia('(prefers-color-scheme: dark)').matches ? BotterflyLogoDark : BotterflyLogoLight}
+                  alt="Botterfly Logo"
+                  className="h-8 w-8 mr-2"
+                />
+              ) : (
+                 <img
+                src={BotterflyLogoLight}
+                alt="Botterfly Logo"
+                className="h-8 w-8 mr-2"
+              />
+              )}
+              <span>Botterfly</span>
+            </a>
+          </NavigationMenuItem>
+
+          {/* mobile */}
+          <span className="flex md:hidden">
+            <ModeToggle />
+
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger className="px-2">
+                <Menu
+                  className="flex md:hidden h-5 w-5"
+                  onClick={() => setIsOpen(true)}
+                >
+                  <span className="sr-only">Menu Icon</span>
+                </Menu>
+              </SheetTrigger>
+
+              <SheetContent side={"left"}>
+                <SheetHeader>
+                  <SheetTitle className="font-bold text-xl">
+                    Botterfly
+                  </SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col justify-center items-center gap-2 mt-4">
+                  {routeList.map(({ href, label }: RouteProps) => (
+                    <a
+                      rel="noreferrer noopener"
+                      key={label}
+                      href={href}
+                      onClick={() => setIsOpen(false)}
+                      className={buttonVariants({ variant: "ghost" })}
+                    >
+                      {label}
+                    </a>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          </span>
+
+          {/* desktop */}
+          <nav className="hidden md:flex gap-2">
+            {routeList.map((route: RouteProps, i) => (
+              <a
+                rel="noreferrer noopener"
+                href={route.href}
+                key={i}
+                className={`text-[17px] ${buttonVariants({
+                  variant: "ghost",
+                })}`}
+              >
+                {route.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="hidden md:flex gap-2">
+            <ModeToggle />
+          </div>
+        </NavigationMenuList>
+      </NavigationMenu>
+    </header>
+  );
+};
