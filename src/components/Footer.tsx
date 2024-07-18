@@ -45,44 +45,26 @@ export const Footer = () => {
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg">Industries</h3>
           <div>
-            <a rel="noreferrer noopener" href="#memory-assistance" className="opacity-60 hover:opacity-100">
-              Custom Chatbots
+            <a rel="noreferrer noopener" href="/industry/dentistry" className="opacity-60 hover:opacity-100">
+              Dentistry
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#ai-driven-insights" className="opacity-60 hover:opacity-100">
-              Prompt Writing & Optimization
+            <a rel="noreferrer noopener" href="/industry/travel" className="opacity-60 hover:opacity-100">
+              Travel & Hospitality
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#project-management" className="opacity-60 hover:opacity-100">
-              Fine-Tuning AI Models
+            <a rel="noreferrer noopener" href="/industry/education" className="opacity-60 hover:opacity-100">
+              Education
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#memory" className="opacity-60 hover:opacity-100">
-              Data Analysis & Predictive Analytics
-            </a>
-          </div>
-
-          <div>
-            <a rel="noreferrer noopener" href="#memory" className="opacity-60 hover:opacity-100">
-              Custom AI Solutions
-            </a>
-          </div>
-
-          <div>
-            <a rel="noreferrer noopener" href="#memory" className="opacity-60 hover:opacity-100">
-              LLMOps
-            </a>
-          </div>
-
-          <div>
-            <a rel="noreferrer noopener" href="#memory" className="opacity-60 hover:opacity-100">
-              Project Consulting
+            <a rel="noreferrer noopener" href="/industry/public-sector" className="opacity-60 hover:opacity-100">
+              Government & Public Sector
             </a>
           </div>
         </div>

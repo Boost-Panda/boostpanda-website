@@ -120,9 +120,9 @@ export const Features = () => {
               </h2>
               <p className="pt-4 text-xl">{feature.description}</p>
               <div className="gap-x-2 gap-y-2 mt-4 flex flex-wrap ">
-                {feature.keywords.map((keyword) => {
+                {feature.keywords.map((keyword, index) => {
                   return (
-                    <Badge className="text-sm font-normal" variant="outline">
+                    <Badge className="text-sm font-normal" variant="outline" key={index}>
                       {keyword}
                     </Badge>
                   );
