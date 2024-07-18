@@ -1,25 +1,15 @@
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
-import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '@/components/ui/navigation-menu';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 
-import { buttonVariants } from "./ui/button";
-import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
-import { useEffect, useState } from "react";
-import { useTheme } from "./theme-provider";
+import { buttonVariants } from './ui/button';
+import { Menu } from 'lucide-react';
+import { ModeToggle } from './mode-toggle';
+import { useEffect, useState } from 'react';
+import { useTheme } from './theme-provider';
 
 // import { LogoIcon } from "./Icons";
-import BotterflyLogoLight from "@/assets/light-mode-logo.svg";
-import BotterflyLogoDark from "@/assets/dark-mode-logo.svg";
+import LogoLight from '@/assets/light-mode-logo.svg';
+import LogoDark from '@/assets/dark-mode-logo.svg';
 interface RouteProps {
   href: string;
   label: string;
@@ -27,26 +17,30 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: "#features",
-    label: "Features",
+    href: '#features',
+    label: 'Solutions',
   },
   {
-    href: "#earlyAccess",
-    label: "Contact",
+    href: '/about',
+    label: 'About Us',
   },
   {
-    href: "#faq",
-    label: "FAQ",
+    href: '#earlyAccess',
+    label: 'Contact',
+  },
+  {
+    href: '#faq',
+    label: 'FAQ',
   },
 ];
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [theme, setTheme] = useState<string>("");
+  const [theme, setTheme] = useState<string>('');
   const { setTheme: setThemeContext } = useTheme();
   useEffect(() => {
-    const localTheme = localStorage.getItem("vite-ui-theme");
-    setTheme(localTheme || "");
+    const localTheme = localStorage.getItem('vite-ui-theme');
+    setTheme(localTheme || '');
   }, [setThemeContext]);
 
   return (
@@ -54,31 +48,21 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <a
-              rel="noreferrer noopener"
-              href="/"
-              className="ml-2 font-bold text-xl flex"
-            >
-              {theme === "dark" ? (
-                 <img
-                src={BotterflyLogoDark}
-                alt="Botterfly Logo"
-                className="h-8 w-8 mr-2"
-              />
-              ) : theme === "system" ? (
+            <a rel="noreferrer noopener" href="/" className="ml-2 font-bold text-xl flex">
+              {theme === 'dark' ? (
+                <img src={LogoDark} alt="BoostPanda Logo" className="h-8 w-8 mr-2" />
+              ) : theme === 'system' ? (
                 <img
-                  src={window.matchMedia('(prefers-color-scheme: dark)').matches ? BotterflyLogoDark : BotterflyLogoLight}
-                  alt="Botterfly Logo"
+                  src={
+                    window.matchMedia('(prefers-color-scheme: dark)').matches ? LogoDark : LogoLight
+                  }
+                  alt="BoostPanda Logo"
                   className="h-8 w-8 mr-2"
                 />
               ) : (
-                 <img
-                src={BotterflyLogoLight}
-                alt="Botterfly Logo"
-                className="h-8 w-8 mr-2"
-              />
+                <img src={LogoLight} alt="BoostPanda Logo" className="h-8 w-8 mr-2" />
               )}
-              <span>Botterfly</span>
+              <span>BoostPanda</span>
             </a>
           </NavigationMenuItem>
 
@@ -88,19 +72,14 @@ export const Navbar = () => {
 
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2">
-                <Menu
-                  className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}
-                >
+                <Menu className="flex md:hidden h-5 w-5" onClick={() => setIsOpen(true)}>
                   <span className="sr-only">Menu Icon</span>
                 </Menu>
               </SheetTrigger>
 
-              <SheetContent side={"left"}>
+              <SheetContent side={'left'}>
                 <SheetHeader>
-                  <SheetTitle className="font-bold text-xl">
-                    Botterfly
-                  </SheetTitle>
+                  <SheetTitle className="font-bold text-xl">BoostPanda</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
                   {routeList.map(({ href, label }: RouteProps) => (
@@ -109,7 +88,7 @@ export const Navbar = () => {
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
+                      className={buttonVariants({ variant: 'ghost' })}
                     >
                       {label}
                     </a>
@@ -127,7 +106,7 @@ export const Navbar = () => {
                 href={route.href}
                 key={i}
                 className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
+                  variant: 'ghost',
                 })}`}
               >
                 {route.label}

@@ -1,4 +1,5 @@
 import pilot from "../assets/pilot.png";
+// import { Statistics } from "./Statistics";
 
 export const About = () => {
   return (
@@ -17,17 +18,13 @@ export const About = () => {
             <div className="pt-20">
               <h2 className="text-3xl md:text-4xl font-bold">
                 <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-                Optimize{" "}
+                Supercharge{" "}
                 </span>
-                Your Team Productivity with Botterfly. Get Started Now!
+                Your Business with Tailored AI Solutions. Get Started Today!
               </h2>
-              {/* <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
-              </p> */}
+              <p className="text-xl text-muted-foreground mt-4">
+              BoostPanda offers AI tools to boost your business. From custom chatbots to smart data insights, we help you work better. Whether you’re a startup or a big company, our AI tools and support help you grow. See how BoostPanda can help your business today.
+              </p>
             </div>
 
             {/* <Statistics /> */}

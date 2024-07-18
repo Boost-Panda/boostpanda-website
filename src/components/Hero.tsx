@@ -1,19 +1,19 @@
 import { Button } from './ui/button';
 // import { buttonVariants } from "./ui/button";
-import { HeroCards } from './HeroCards';
+// import { HeroCards } from './HeroCards';
 // import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const Hero = () => {
   return (
-    <section className="container grid lg:grid-cols-2 place-items-center pt-20 md:py-20 gap-10">
+    <section className="container grid lg:grid-cols-1 place-items-center pt-40 lg:pt-64 md:py-20 gap-10">
       <div className="text-center lg:text-start space-y-6">
         <main className="text-5xl md:text-6xl font-bold">
-          <h1 className="inline">
-            Boost Your Business with Smart AI Solutions
+          <h1 className="inline text-center">
             <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
               {' '}
-              BOTTERFLY
+              Boost
             </span>{' '}
+            Your Business with Smart AI Solutions
           </h1>{' '}
           {/* <h2 className="inline">
             <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
@@ -23,18 +23,19 @@ export const Hero = () => {
           </h2> */}
         </main>
 
-        <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Maximize Efficiency, Streamline Workflows. Harness AI to Drive Productivity and Project Success.
+        <p className="text-xl text-muted-foreground mx-auto lg:mx-0 text-center">
+          Our custom AI services, from chatbots to data analytics, help you work smarter, not harder.
         </p>
-
-        <div>
-          <div className="space-y-4 md:space-y-2 md:space-x-4 mb-4">
-            <a
+        <div className="gap-4 pb-4 pt-8 flex flex-col justify-center w-full content-center flex-wrap">
+          <Button variant="secondary" className="w-full md:w-64">
+            <a href="#services">Explore Our Services</a>
+          </Button>
+          {/* <a
               rel="noreferrer noopener"
-              href="#features"
+              href="#services"
               className="text-primary transition-all border-primary hover:border-b-2"
             >
-              Features
+              Services
             </a>
             <a
               rel="noreferrer noopener"
@@ -42,18 +43,17 @@ export const Hero = () => {
               className="text-primary transition-all border-primary hover:border-b-2 pl-1"
             >
               Contact
-            </a>
-          </div>
-          <Button className="w-full md:w-1/3">
+            </a> */}
+          <Button className="w-full md:w-64">
             <a href="#earlyAccess">Get Early Access</a>
           </Button>
         </div>
       </div>
 
       {/* Hero cards sections */}
-      <div className="z-10">
+      {/* <div className="z-10">
         <HeroCards />
-      </div>
+      </div> */}
 
       {/* Shadow effect */}
       <div className="shadow"></div>

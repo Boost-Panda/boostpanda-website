@@ -15,9 +15,9 @@ interface FeatureProps {
 const features: FeatureProps[] = [
   {
     icon: <PluginIcon />,
-    title: "Is Botterfly easy to integrate?",
+    title: "Is BoostPanda easy to integrate?",
     description:
-      "Connect Botterfly with your existing project management tools in just a few clicks. Hassle-free onboarding guaranteed.",
+      "Connect BoostPanda with your existing project management tools in just a few clicks. Hassle-free onboarding guaranteed.",
   },
   {
     icon: <MemoryIcon />,
@@ -35,7 +35,7 @@ const features: FeatureProps[] = [
     icon: <RecommendationIcon />,
     title: "Data-Driven Insights & Recommendations",
     description:
-      "Harness data for actionable insights and smarter decisions with Botterfly. Optimize processes and drive project success.",
+      "Harness data for actionable insights and smarter decisions with BoostPanda. Optimize processes and drive project success.",
   },
 ];
 
@@ -43,7 +43,7 @@ export const HowItWorks = () => {
   return (
     <section id="howItWorks" className="container py-24 sm:py-16">
       <h2 className="text-3xl md:text-4xl font-bold text-center">
-        How Does Botterfly{" "}
+        How Does BoostPanda{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
           Works?{" "}
         </span>
@@ -53,7 +53,7 @@ export const HowItWorks = () => {
         Simplified, Streamlined, Supercharged
       </h3>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Integrating Botterfly is a breeze. With just a few clicks, you can
+        Integrating BoostPanda is a breeze. With just a few clicks, you can
         connect your existing project management tools like Jira, Asana,
         Monday.com, ClickUp, Slack, MS Teams and more. Our platform is designed
         for hassle-free onboarding, so you can get started in no time.

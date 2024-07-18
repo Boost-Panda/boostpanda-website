@@ -36,7 +36,7 @@ export const Integrations = () => {
                   ? darkModeIntegrations
                   : lightModeIntegrations
               }
-              alt="Botterfly Logo"
+              alt="BoostPanda Logo"
               className="w-1/2 mt-8"
             />
           ) : (
@@ -63,7 +63,7 @@ export const Integrations = () => {
                   ? mobileIntergrationsDark
                   : mobileIntegrations
               }
-              alt="Botterfly Logo"
+              alt="BoostPanda Logo"
               className="w-4/5 mt-8"
             />
           ) : (
@@ -76,7 +76,7 @@ export const Integrations = () => {
         </div>
       </div>
       <p className="text-center text-xl pt-8 lg:px-60 xl:px-60 md:px-20 sm:px-6 text-muted-foreground">
-        Botterfly integrates with SharePoint, MS Graph, Trello, Jira, MS Teams,
+        BoostPanda integrates with SharePoint, MS Graph, Trello, Jira, MS Teams,
         Asana, Slack, Monday.com, ClickUp, Confluence, and Zoho Projects.
         Streamline your workflow effortlessly.
       </p>
