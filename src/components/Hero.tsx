@@ -31,7 +31,7 @@ export const Hero = () => {
             <a href="#services">Explore Our Services</a>
           </Button>
           <Button asChild className="w-full md:w-64">
-            <a href="#earlyAccess">Get Early Access</a>
+            <a href="#earlyAccess">Talk To Us</a>
           </Button>
         </div>
       </div>

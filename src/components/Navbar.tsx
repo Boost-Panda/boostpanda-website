@@ -6,6 +6,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 
@@ -71,7 +72,7 @@ const routeList: RouteProps[] = [
     label: 'Contact',
   },
   {
-    href: '#faq',
+    href: '/#faq',
     label: 'FAQ',
   },
 ];
@@ -122,13 +123,54 @@ export const Navbar = () => {
                   <SheetTitle className="font-bold text-xl">BoostPanda</SheetTitle>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
+                  <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem value="item-1">
+                      <AccordionTrigger>Services</AccordionTrigger>
+                      <AccordionContent>
+                        <div>
+                          <h4 className="text-sm font-semibold">Industries</h4>
+                          <ul className={`${theme === 'light' ? 'text-black' : ' text-white'}`}>
+                            <ListItem href="/industry/dentistry" title="Dentistry">
+                              Enhance your clinic's efficiency and visibility.
+                            </ListItem>
+                            <ListItem href="/industry/travel" title="Travel & Hospitality">
+                              End to end solutions for your travel business.
+                            </ListItem>
+                            <ListItem href="/industry/education" title="Education">
+                              Modernize your institution with AI.
+                            </ListItem>
+                            <ListItem href="/industry/public-sector" title="Government & Public Sector">
+                              Custom-built solutions for the public sector.
+                            </ListItem>
+                          </ul>
+                        </div>
+                        <div className="mt-4">
+                          <h4 className="text-sm font-semibold">Products</h4>
+                          <ul className={`${theme === 'light' ? 'text-black' : ' text-white'}`}>
+                            <ListItem href="/product/chatbots" title="Custom Chatbots">
+                              Powerful, custom chatbots for your business.
+                            </ListItem>
+                            <ListItem href="/product/llm-apps" title="LLM Apps & Pipelines">
+                              Automate your business processes.
+                            </ListItem>
+                            <ListItem href="/product/ai-analytics" title="AI Analytics">
+                              Get insights from your data and make informed decisions.
+                            </ListItem>
+                            <ListItem href="/product/ai-consulting" title="Training & Consulting">
+                              Get expert advice on AI.
+                            </ListItem>
+                          </ul>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                   {routeList.map(({ href, label }: RouteProps) => (
                     <a
                       rel="noreferrer noopener"
                       key={label}
                       href={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: 'ghost' })}
+                      className={`border-b-[1px] w-full text-left rounded-none pb-4 pt-2`}
                     >
                       {label}
                     </a>
@@ -174,12 +216,14 @@ export const Navbar = () => {
                     <div className="grid xl:grid-cols-5 grid-cols-4 xl:gap-3 gap-2 xl:p-6 p-4 xl:w-[60rem] w-[35rem]">
                       <NavigationMenuLink asChild className="xl:col-span-1 md:hidden lg:hidden xl:block">
                         <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-purple-100 to-red-50 p-6 no-underline outline-none focus:shadow-md"
+                          className={`flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md ${theme === 'light' ? 'from-purple-100 to-red-50' : 'from-purple-700 to-red-900'}`}
                           href="/"
                         >
                           {/* <Icons.logo className="h-6 w-6" /> */}
-                          <div className="mb-2 mt-2 text-lg font-medium">Supercharge your business with AI</div>
-                          <p className="text-sm leading-tight text-muted-foreground">
+                          <div className={`mb-2 mt-2 text-lg font-medium`}>Supercharge your business with AI</div>
+                          <p
+                            className={`text-sm leading-tight ${theme === 'light' ? 'text-muted-foreground' : 'text-grey-400'}`}
+                          >
                             Our custom AI services, from chatbots to data analytics, help you work smarter, not harder.
                           </p>
                         </a>
