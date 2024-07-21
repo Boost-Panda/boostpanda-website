@@ -13,7 +13,7 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/co
 import { buttonVariants } from './ui/button';
 import { Menu } from 'lucide-react';
 import { ModeToggle } from './mode-toggle';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useTheme } from './theme-provider';
 
 // import { LogoIcon } from "./Icons";
@@ -79,12 +79,12 @@ const routeList: RouteProps[] = [
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [theme, setTheme] = useState<string>('');
-  const { setTheme: setThemeContext } = useTheme();
-  useEffect(() => {
-    const localTheme = localStorage.getItem('vite-ui-theme');
-    setTheme(localTheme || '');
-  }, [setThemeContext]);
+  // const [theme, setTheme] = useState<string>('');
+  const { theme } = useTheme();
+  // useEffect(() => {
+  //   const localTheme = localStorage.getItem('vite-ui-theme');
+  // setTheme(localTheme || '');
+  // }, [setThemeContext]);
 
   return (
     <header className="sticky border-b-[1px] top-0 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
