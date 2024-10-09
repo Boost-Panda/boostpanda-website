@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/components/theme-provider.tsx';
 import '@/index.css';
 
 import { createHashRouter, RouterProvider, ScrollRestoration } from 'react-router-dom';
+import { Layout } from '@/components/Layout';
 
 const router = createHashRouter(
   [
@@ -14,7 +15,9 @@ const router = createHashRouter(
       path: '/',
       element: (
         <>
-          <App />
+          <Layout>
+            <App />
+          </Layout>
           <ScrollRestoration />
         </>
       ),
@@ -24,7 +27,9 @@ const router = createHashRouter(
       path: '/industry/dentistry',
       element: (
         <>
-          <Dentistry />
+          <Layout>
+            <Dentistry />
+          </Layout>
           <ScrollRestoration />
         </>
       ),
