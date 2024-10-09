@@ -64,7 +64,7 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: '/about',
+    href: '#/about',
     label: 'About Us',
   },
   {
@@ -72,7 +72,7 @@ const routeList: RouteProps[] = [
     label: 'Contact',
   },
   {
-    href: '/#faq',
+    href: '#faq',
     label: 'FAQ',
   },
 ];
@@ -91,7 +91,7 @@ export const Navbar = () => {
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
           <NavigationMenuItem className="font-bold flex">
-            <a rel="noreferrer noopener" href="/" className="ml-2 font-bold text-xl flex">
+            <a rel="noreferrer noopener" href="#/" className="ml-2 font-bold text-xl flex">
               {theme === 'dark' ? (
                 <img src={LogoDark} alt="BoostPanda Logo" className="h-8 w-8 mr-2" />
               ) : theme === 'system' ? (
@@ -130,16 +130,16 @@ export const Navbar = () => {
                         <div>
                           <h4 className="text-sm font-semibold">Industries</h4>
                           <ul className={`${theme === 'light' ? 'text-black' : ' text-white'}`}>
-                            <ListItem href="/industry/dentistry" title="Dentistry">
+                            <ListItem href="#/industry/dentistry" title="Dentistry">
                               Enhance your clinic's efficiency and visibility.
                             </ListItem>
-                            <ListItem href="/industry/travel" title="Travel & Hospitality">
+                            <ListItem href="#/industry/travel" title="Travel & Hospitality">
                               End to end solutions for your travel business.
                             </ListItem>
-                            <ListItem href="/industry/education" title="Education">
+                            <ListItem href="#/industry/education" title="Education">
                               Modernize your institution with AI.
                             </ListItem>
-                            <ListItem href="/industry/public-sector" title="Government & Public Sector">
+                            <ListItem href="#/industry/public-sector" title="Government & Public Sector">
                               Custom-built solutions for the public sector.
                             </ListItem>
                           </ul>
@@ -147,16 +147,16 @@ export const Navbar = () => {
                         <div className="mt-4">
                           <h4 className="text-sm font-semibold">Products</h4>
                           <ul className={`${theme === 'light' ? 'text-black' : ' text-white'}`}>
-                            <ListItem href="/product/chatbots" title="Custom Chatbots">
+                            <ListItem href="#/product/chatbots" title="Custom Chatbots">
                               Powerful, custom chatbots for your business.
                             </ListItem>
-                            <ListItem href="/product/llm-apps" title="LLM Apps & Pipelines">
+                            <ListItem href="#/product/llm-apps" title="LLM Apps & Pipelines">
                               Automate your business processes.
                             </ListItem>
-                            <ListItem href="/product/ai-analytics" title="AI Analytics">
+                            <ListItem href="#/product/ai-analytics" title="AI Analytics">
                               Get insights from your data and make informed decisions.
                             </ListItem>
-                            <ListItem href="/product/ai-consulting" title="Training & Consulting">
+                            <ListItem href="#/product/ai-consulting" title="Training & Consulting">
                               Get expert advice on AI.
                             </ListItem>
                           </ul>
@@ -217,7 +217,7 @@ export const Navbar = () => {
                       <NavigationMenuLink asChild className="xl:col-span-1 md:hidden lg:hidden xl:block">
                         <a
                           className={`flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md ${theme === 'light' ? 'from-purple-100 to-red-50' : 'from-purple-700 to-red-900'}`}
-                          href="/"
+                          href="#/"
                         >
                           {/* <Icons.logo className="h-6 w-6" /> */}
                           <div className={`mb-2 mt-2 text-lg font-medium`}>Supercharge your business with AI</div>
@@ -231,16 +231,16 @@ export const Navbar = () => {
                       <div className="col-span-2">
                         <h4 className="text-lg font-semibold">Industries</h4>
                         <ul>
-                          <ListItem href="/industry/dentistry" title="Dentistry">
+                          <ListItem href="#/industry/dentistry" title="Dentistry">
                             Enhance your clinic's efficiency and visibility.
                           </ListItem>
-                          <ListItem href="/industry/travel" title="Travel & Hospitality">
+                          <ListItem href="#/industry/travel" title="Travel & Hospitality">
                             End to end solutions for your travel business.
                           </ListItem>
-                          <ListItem href="/industry/education" title="Education">
+                          <ListItem href="#/industry/education" title="Education">
                             Modernize your institution with AI.
                           </ListItem>
-                          <ListItem href="/industry/public-sector" title="Government & Public Sector">
+                          <ListItem href="#/industry/public-sector" title="Government & Public Sector">
                             Custom-built solutions for the public sector.
                           </ListItem>
                         </ul>
@@ -248,16 +248,16 @@ export const Navbar = () => {
                       <div className="col-span-2">
                         <h4 className="text-lg font-semibold">Products</h4>
                         <ul>
-                          <ListItem href="/product/chatbots" title="Custom Chatbots">
+                          <ListItem href="#/product/chatbots" title="Custom Chatbots">
                             Powerful, custom chatbots for your business.
                           </ListItem>
-                          <ListItem href="/product/llm-apps" title="LLM Apps & Pipelines">
+                          <ListItem href="#/product/llm-apps" title="LLM Apps & Pipelines">
                             Automate your business processes.
                           </ListItem>
-                          <ListItem href="/product/ai-analytics" title="AI Analytics">
+                          <ListItem href="#/product/ai-analytics" title="AI Analytics">
                             Get insights from your data and make informed decisions.
                           </ListItem>
-                          <ListItem href="/product/ai-consulting" title="Training & Consulting">
+                          <ListItem href="#/product/ai-consulting" title="Training & Consulting">
                             Get expert advice on AI.
                           </ListItem>
                         </ul>
