@@ -32,12 +32,12 @@ export const Hero = () => {
         </p>
         <div className="gap-4 pb-4 pt-8 flex flex-col justify-center w-full content-center flex-wrap">
           <Button asChild variant="secondary" className="w-full md:w-64">
-            <a data-scroll-to="services" onClick={handleScrollTo}>
+            <a data-scroll-to="services" onClick={handleScrollTo} className="cursor-pointer">
               Explore Our Services
             </a>
           </Button>
           <Button asChild className="w-full md:w-64">
-            <a data-scroll-to="earlyAccess" onClick={handleScrollTo}>
+            <a data-scroll-to="earlyAccess" onClick={handleScrollTo} className="cursor-pointer">
               Talk To Us
             </a>
           </Button>

@@ -72,43 +72,43 @@ export const Footer = () => {
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg">Services</h3>
           <div>
-            <a rel="noreferrer noopener" href="#memory-assistance" className="opacity-60 hover:opacity-100">
+            <a rel="noreferrer noopener" href="/#memory-assistance" className="opacity-60 hover:opacity-100">
               Custom Chatbots
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#ai-driven-insights" className="opacity-60 hover:opacity-100">
+            <a rel="noreferrer noopener" href="/#ai-driven-insights" className="opacity-60 hover:opacity-100">
               Prompt Writing & Optimization
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#project-management" className="opacity-60 hover:opacity-100">
+            <a rel="noreferrer noopener" href="/#project-management" className="opacity-60 hover:opacity-100">
               Fine-Tuning AI Models
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#memory" className="opacity-60 hover:opacity-100">
+            <a rel="noreferrer noopener" href="/#memory" className="opacity-60 hover:opacity-100">
               Data Analysis & Predictive Analytics
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#memory" className="opacity-60 hover:opacity-100">
+            <a rel="noreferrer noopener" href="/#memory" className="opacity-60 hover:opacity-100">
               Custom AI Solutions
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#memory" className="opacity-60 hover:opacity-100">
+            <a rel="noreferrer noopener" href="/#memory" className="opacity-60 hover:opacity-100">
               LLMOps
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#memory" className="opacity-60 hover:opacity-100">
+            <a rel="noreferrer noopener" href="/#memory" className="opacity-60 hover:opacity-100">
               Project Consulting
             </a>
           </div>
@@ -117,13 +117,13 @@ export const Footer = () => {
         <div className="flex flex-col gap-2">
           <h3 className="font-bold text-lg">Support</h3>
           <div>
-            <a rel="noreferrer noopener" href="#faq" className="opacity-60 hover:opacity-100">
+            <a rel="noreferrer noopener" href="/#faq" className="opacity-60 hover:opacity-100">
               FAQs
             </a>
           </div>
 
           <div>
-            <a rel="noreferrer noopener" href="#earlyAccess" className="opacity-60 hover:opacity-100">
+            <a rel="noreferrer noopener" href="/#earlyAccess" className="opacity-60 hover:opacity-100">
               Contact
             </a>
           </div>

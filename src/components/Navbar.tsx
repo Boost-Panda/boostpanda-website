@@ -64,15 +64,15 @@ interface RouteProps {
 
 const routeList: RouteProps[] = [
   {
-    href: '#/about',
+    href: '/#about',
     label: 'About Us',
   },
   {
-    href: '#earlyAccess',
+    href: '/#earlyAccess',
     label: 'Contact',
   },
   {
-    href: '#faq',
+    href: '/#faq',
     label: 'FAQ',
   },
 ];
