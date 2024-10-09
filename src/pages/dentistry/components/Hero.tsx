@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 // import { buttonVariants } from "./ui/button";
 // import { HeroCards } from '@/components/HeroCards';
 import { useTheme } from '@/components/theme-provider';
+import { useScrollTo } from '@/hooks/useScrollTo';
 
 import DentalHeroImageLight from '@/assets/dental-hero.png';
 import DentalHeroImageDark from '@/assets/dental-hero-dark.png';
@@ -9,7 +10,7 @@ import DentalHeroImageDark from '@/assets/dental-hero-dark.png';
 
 export const Hero = () => {
   const { theme } = useTheme();
-
+  const handleScrollTo = useScrollTo();
   return (
     <section className="container grid lg:grid-cols-2 place-items-center pt-20 gap-10">
       <div className="text-center lg:text-left xs:text-center space-y-6">
@@ -34,10 +35,14 @@ export const Hero = () => {
         </p>
         <div className="gap-4 pb-4 pt-8 flex flex-col justify-center w-full content-left flex-wrap">
           <Button asChild variant="secondary" className="w-full md:w-64">
-            <a href="#services">See Features</a>
+            <a data-scroll-to="services" onClick={handleScrollTo}>
+              See Features
+            </a>
           </Button>
           <Button asChild className="w-full md:w-64">
-            <a href="#earlyAccess">Talk to Us</a>
+            <a data-scroll-to="earlyAccess" onClick={handleScrollTo}>
+              Talk to Us
+            </a>
           </Button>
         </div>
       </div>

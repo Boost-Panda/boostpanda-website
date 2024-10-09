@@ -6,18 +6,28 @@ import ErrorPage from '@/ErrorPage.tsx';
 import { ThemeProvider } from '@/components/theme-provider.tsx';
 import '@/index.css';
 
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider, ScrollRestoration } from 'react-router-dom';
 
 const router = createHashRouter(
   [
     {
       path: '/',
-      element: <App />,
+      element: (
+        <>
+          <App />
+          <ScrollRestoration />
+        </>
+      ),
       errorElement: <ErrorPage />,
     },
     {
       path: '/industry/dentistry',
-      element: <Dentistry />,
+      element: (
+        <>
+          <Dentistry />
+          <ScrollRestoration />
+        </>
+      ),
     },
   ],
   { basename: '/' }

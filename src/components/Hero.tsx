@@ -1,9 +1,13 @@
 import { Button } from './ui/button';
+import { useScrollTo } from '@/hooks/useScrollTo';
+
 // import { buttonVariants } from "./ui/button";
 // import { HeroCards } from './HeroCards';
 // import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const Hero = () => {
+  const handleScrollTo = useScrollTo();
+
   return (
     <section className="container grid lg:grid-cols-1 place-items-center pt-40 lg:pt-64 md:pb-20 md:pt-40 gap-10">
       <div className="text-center space-y-6">
@@ -28,10 +32,14 @@ export const Hero = () => {
         </p>
         <div className="gap-4 pb-4 pt-8 flex flex-col justify-center w-full content-center flex-wrap">
           <Button asChild variant="secondary" className="w-full md:w-64">
-            <a data-scroll-to="services">Explore Our Services</a>
+            <a data-scroll-to="services" onClick={handleScrollTo}>
+              Explore Our Services
+            </a>
           </Button>
           <Button asChild className="w-full md:w-64">
-            <a data-scroll-to="earlyAccess">Talk To Us</a>
+            <a data-scroll-to="earlyAccess" onClick={handleScrollTo}>
+              Talk To Us
+            </a>
           </Button>
         </div>
       </div>
