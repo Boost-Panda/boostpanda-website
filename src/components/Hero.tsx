@@ -28,10 +28,10 @@ export const Hero = () => {
         </p>
         <div className="gap-4 pb-4 pt-8 flex flex-col justify-center w-full content-center flex-wrap">
           <Button asChild variant="secondary" className="w-full md:w-64">
-            <a href="#services">Explore Our Services</a>
+            <a data-scroll-to="services">Explore Our Services</a>
           </Button>
           <Button asChild className="w-full md:w-64">
-            <a href="#earlyAccess">Talk To Us</a>
+            <a data-scroll-to="earlyAccess">Talk To Us</a>
           </Button>
         </div>
       </div>
