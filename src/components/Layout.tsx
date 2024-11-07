@@ -14,7 +14,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
 
       <div className="fixed bottom-0 right-0" style={{ width: '27rem', height: '37rem', zIndex: 1000 }}>
         <iframe
-          src="http://localhost:3000"
+          src="https://pandy-bot.vercel.app"
           width="100%"
           height="100%"
           style={{ border: 'none' }}
