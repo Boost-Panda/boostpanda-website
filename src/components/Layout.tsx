@@ -8,6 +8,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   useScrollToTop();
 
   const isMobile = window.innerWidth < 768;
+  const orgId = '67436ccbdc82e8fba1b10d7a';
 
   return (
     <>
@@ -19,7 +20,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         style={{ width: isMobile ? '100%' : '27rem', height: isMobile ? '100%' : '37rem', zIndex: 1000 }}
       >
         <iframe
-          src={`https://pandy-bot.vercel.app?deviceType=${isMobile ? 'mobile' : 'desktop'}`}
+          src={`https://pandy-bot.vercel.app?orgId=${orgId}&deviceType=${isMobile ? 'mobile' : 'desktop'}`}
           width="100%"
           height="100%"
           style={{ border: 'none' }}
