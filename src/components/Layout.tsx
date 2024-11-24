@@ -8,7 +8,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   useScrollToTop();
 
   const isMobile = window.innerWidth < 768;
-  const orgId = '67436ccbdc82e8fba1b10d7a';
+  const orgId = 'org_2oYYvseCKAv7nUsIly4MHwN5Wv0';
 
   return (
     <>
