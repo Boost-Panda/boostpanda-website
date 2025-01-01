@@ -216,9 +216,12 @@ export const Navbar = () => {
                     <div className="grid xl:grid-cols-5 grid-cols-4 xl:gap-3 gap-2 xl:p-6 p-4 xl:w-[60rem] w-[35rem]">
                       <NavigationMenuLink asChild className="xl:col-span-1 md:hidden lg:hidden xl:block">
                         <a
-                          className={`flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b p-6 no-underline outline-none focus:shadow-md ${
-                            theme === 'light' ? 'from-purple-100 to-red-50' : 'from-purple-700 to-red-900'
-                          }`}
+                          className={cn(
+                            'flex h-full w-full select-none flex-col justify-end rounded-md p-6 no-underline outline-none focus:shadow-md',
+                            theme === 'light'
+                              ? 'bg-gradient-to-b from-purple-100 to-red-50'
+                              : 'bg-gradient-to-b from-purple-700 to-red-900'
+                          )}
                           href="#/"
                         >
                           {/* <Icons.logo className="h-6 w-6" /> */}
